@@ -1,0 +1,29 @@
+extends layout/DefaultLayout
+
+prepend ConfigBlock
+  - page_name = ''
+
+//- append StylesheetBlock
+
+//- append JavascriptBlock
+
+block ContentBlock
+  .content
+    .tab_swichs
+      .tab_swich.cursor(data-no="1") IMG 1
+      .tab_swich IMG 2
+      .tab_swich IMG 3
+      .tab_swich IMG 4
+      .tab_swich IMG 5
+      .tab_swich IMG 6
+
+    .tab_box
+      .tab.cursor.readimage
+        img(src="images/image01.jpg")
+      .tab.readimage
+        img(src="images/image02.jpg")
+      .tab.readimage
+        img(src="images/image03.jpg")
+      .tab.tab_bg.tab_bg__04
+      .tab.tab_bg.tab_bg__05
+      .tab.tab_bg.tab_bg__06

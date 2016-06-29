@@ -1,6 +1,9 @@
 read image
 ====
 
+##サンプル
+https://kiritani05.github.io/readimage/public/
+
 ## 使用方法
 - スクリプトを読み込む
 jqueryを使ってます

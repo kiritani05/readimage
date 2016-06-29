@@ -10,9 +10,14 @@ $(function() {
         '../images/image04.jpg',
         '../images/image05.jpg',
         '../images/image06.jpg'
-      ]
+      ],
+      callback: function(){
+        $(".alert").fadeIn(1,function(){
+          $(this).fadeOut(2500);
+        });
+      }
     }
-    new Readimage(opts);
+    var Read = new Readimage(opts);
 
 
     // tab script
@@ -23,4 +28,6 @@ $(function() {
         var index = $('.tab_swich').index(this);
         $(".tab").eq(index).addClass(CURSOR_CLASS);
     });
+
+
 });

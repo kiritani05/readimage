@@ -1,63 +1,75 @@
 body {
-  background-color: $BLACK;
+    background-color: $BLACK;
 }
 .tab_box {
-  width: 100%;
-  height: 700px;
+    width: 100%;
+    height: 700px;
 }
 .content {
-  -webkit-font-smoothing: antialiased;
-  .tab_swichs
-  {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: rgba(#FFF, 0.4);
-    padding: 20px;
-    text-align: left;
-    .tab_swich {
-      width: 150px;
-      height: 50px;
-      line-height: 50px;
-      border: 2px solid gray;
-      display: inline-block;
-      background-color: rgba(#fff, 0.5);
-      text-align: center;
-      border-radius: 5px;
-      color: $BLACK;
-      cursor: pointer;
-      &.cursor {
-        background-color: rgba(#fff, 0.78);
-      }
-    }
-  }
-  .tab_box {
-    .tab {
-      display: none;
-      img {
-        width: 100%;
-        height: auto;
-      }
-      &.cursor {
+    font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
+    -webkit-font-smoothing: antialiased;
+    .tab_swichs {
+        position: absolute;
         display: block;
-      }
+        width: 100%;
+        background-color: rgba(#FFF, 0.4);
+        padding: 20px 20px 15px;
+        text-align: left;
+        .tab_swich {
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            background-color: rgba(#fff, 0.5);
+            text-align: center;
+            border-radius: 3px;
+            color: $BLACK;
+            cursor: pointer;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            box-shadow: 1px 1px 1px 0 rgba(#333, 0.4);
+            &.cursor {
+                background-color: rgba(#fff, 0.78);
+            }
+        }
     }
-    .tab_bg {
-      width: 100%;
-      height: 100%;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: cover;
-      &.tab_bg__04 {
-        background-image: url(../images/image04.jpg);
-      }
-      &.tab_bg__05 {
-        background-image: url(../images/image05.jpg);
-      }
-      &.tab_bg__06 {
-        background-image: url(../images/image06.jpg);
-      }
+    .tab_box {
+        .tab {
+            display: none;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            &.cursor {
+                display: block;
+            }
+        }
+        .tab_bg {
+            width: 100%;
+            height: 100%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &.tab_bg__04 {
+                background-image: url("../images/image04.jpg");
+            }
+            &.tab_bg__05 {
+                background-image: url("../images/image05.jpg");
+            }
+            &.tab_bg__06 {
+                background-image: url("../images/image06.jpg");
+            }
+        }
     }
-
-  }
+    .alert {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        background-color: rgba(#fff, 0.78);
+        padding: 20px;
+        border-radius: 3px;
+        box-shadow: 0 0 5px 0 rgba(#333, 0.4);
+        transform: translate(-50%, -50%);
+    }
 }

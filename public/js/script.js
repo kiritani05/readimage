@@ -9829,12 +9829,13 @@ var Readimage = function () {
   function Readimage(opts) {
     _classCallCheck(this, Readimage);
 
-    this.targetElement = opts.targetElement; //ターゲットエレメント
+    this.targetElement = opts.targetElement;
     this.targetImageUrl = opts.targetImageUrl;
     this.ALLNUM = this.targetElement.length + this.targetImageUrl.length;
     this.CNT = 0;
     this.loadElemmentImage();
     this.loadUrlImage();
+    this.callback = opts.callback;
   }
 
   _createClass(Readimage, [{
@@ -9872,7 +9873,7 @@ var Readimage = function () {
     value: function counter() {
       this.CNT++;
       if (this.CNT >= this.ALLNUM) {
-        console.log("読み込み完了");
+        this.callback();
       }
     }
   }]);
@@ -9901,9 +9902,14 @@ window.$ = _jquery2.default;
   var CURSOR_CLASS = "cursor";
   var opts = {
     targetElement: (0, _jquery2.default)(".readimage"),
-    targetImageUrl: ['../images/image04.jpg', '../images/image05.jpg', '../images/image06.jpg']
+    targetImageUrl: ['../images/image04.jpg', '../images/image05.jpg', '../images/image06.jpg'],
+    callback: function callback() {
+      (0, _jquery2.default)(".alert").fadeIn(1, function () {
+        (0, _jquery2.default)(this).fadeOut(2500);
+      });
+    }
   };
-  new _readimage2.default(opts);
+  var Read = new _readimage2.default(opts);
 
   // tab script
   (0, _jquery2.default)(".tab_swich").click(function () {

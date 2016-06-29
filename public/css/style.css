@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -59,25 +60,28 @@ body {
   height: 700px; }
 
 .content {
+  font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
   -webkit-font-smoothing: antialiased; }
   .content .tab_swichs {
     position: absolute;
     display: block;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 20px;
+    padding: 20px 20px 15px;
     text-align: left; }
     .content .tab_swichs .tab_swich {
       width: 150px;
       height: 50px;
       line-height: 50px;
-      border: 2px solid gray;
       display: inline-block;
       background-color: rgba(255, 255, 255, 0.5);
       text-align: center;
-      border-radius: 5px;
+      border-radius: 3px;
       color: #333;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      box-shadow: 1px 1px 1px 0 rgba(51, 51, 51, 0.4); }
       .content .tab_swichs .tab_swich.cursor {
         background-color: rgba(255, 255, 255, 0.78); }
   .content .tab_box .tab {
@@ -94,8 +98,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover; }
     .content .tab_box .tab_bg.tab_bg__04 {
-      background-image: url(../images/image04.jpg); }
+      background-image: url("../images/image04.jpg"); }
     .content .tab_box .tab_bg.tab_bg__05 {
-      background-image: url(../images/image05.jpg); }
+      background-image: url("../images/image05.jpg"); }
     .content .tab_box .tab_bg.tab_bg__06 {
-      background-image: url(../images/image06.jpg); }
+      background-image: url("../images/image06.jpg"); }
+  .content .alert {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.78);
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 rgba(51, 51, 51, 0.4);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }

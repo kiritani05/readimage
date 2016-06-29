@@ -1,11 +1,12 @@
 export default class Readimage {
   constructor(opts) {
-    this.targetElement = opts.targetElement; //ターゲットエレメント
+    this.targetElement = opts.targetElement;
     this.targetImageUrl = opts.targetImageUrl;
     this.ALLNUM = this.targetElement.length + this.targetImageUrl.length;
     this.CNT = 0 ;
     this.loadElemmentImage();
     this.loadUrlImage();
+    this.callback = opts.callback;
   }
 
   loadElemmentImage() {
@@ -38,7 +39,7 @@ export default class Readimage {
   counter() {
       this.CNT++;
       if (this.CNT >= this.ALLNUM) {
-        console.log("読み込み完了");
+        this.callback();
       }
   }
 }

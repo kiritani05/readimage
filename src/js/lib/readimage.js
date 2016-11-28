@@ -36,6 +36,10 @@ export default class Readimage {
     $(target_img).bind("load", function() {
       _this.counter();
     });
+    $(target_img).bind("error", function() {
+      //エラーでも回す
+      _this.counter();
+    });
     target_img.src = target_img.orginSrc;
   }
 
